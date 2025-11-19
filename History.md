@@ -1,3 +1,7 @@
+1.2.1 / 2025-11-19
+==================
+ * chore: bump mongoose version in test and node versions in workflows
+
 1.2.0 / 2025-11-18
 ==================
  * feat: support mongoose 9 and update github repo org to mongoosejs
