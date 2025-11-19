@@ -1,3 +1,7 @@
+1.2.0 / 2025-11-18
+==================
+ * feat: support mongoose 9 and update github repo org to mongoosejs
+
 1.1.0 / 2023-10-24
 ==================
  * feat: support mongoose 8

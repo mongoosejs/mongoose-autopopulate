@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Always populate() certain fields in your mongoose schemas",
   "main": "index.js",
-  "homepage": "https://github.com/mongodb-js/mongoose-autopopulate",
+  "homepage": "https://github.com/mongoosejs/mongoose-autopopulate",
   "scripts": {
     "docs": "acquit-markdown -r acquit-ignore -p ./test/integration.js > examples.md",
     "lint": "eslint .",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mongodb-js/mongoose-autopopulate.git"
+    "url": "https://github.com/mongoosejs/mongoose-autopopulate.git"
   },
   "keywords": [
     "mongoose",
@@ -31,12 +31,12 @@
     "nyc": "11.7.3"
   },
   "peerDependencies": {
-    "mongoose": "6.x || 7.x || 8.x"
+    "mongoose": "6.x || 7.x || 8.x || ^9.0.0-0"
   },
   "types": "./index.d.ts",
   "author": "Valeri Karpov <val@karpov.io>",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/mongodb-js/mongoose-autopopulate/issues"
+    "url": "https://github.com/mongoosejs/mongoose-autopopulate/issues"
   }
 }
