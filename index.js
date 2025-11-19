@@ -229,7 +229,6 @@ function handleFunction(fn, options) {
 }
 
 function eachPathRecursive(schema, handler, path, schemaStack) {
-
   if (schemaStack.has(schema)) {
     return;
   }
@@ -253,9 +252,9 @@ function eachPathRecursive(schema, handler, path, schemaStack) {
           );
         }
       }
-    } else if (schemaType.$isMongooseArray && schemaType.$embeddedSchemaType.$isMongooseArray) {
+    } else if (schemaType.$isMongooseArray && getEmbeddedSchemaType(schemaType).$isMongooseArray) {
       while (schemaType != null && schemaType.$isMongooseArray && !schemaType.$isMongooseDocumentArray) {
-        schemaType = schemaType.$embeddedSchemaType;
+        schemaType = getEmbeddedSchemaType(schemaType);
       }
       if (schemaType != null && schemaType.$isMongooseDocumentArray) {
         eachPathRecursive(schemaType.schema, handler, path, schemaStack);
@@ -284,4 +283,8 @@ function eachPathRecursive(schema, handler, path, schemaStack) {
       path.pop();
     });
   }
+}
+
+function getEmbeddedSchemaType(schemaType) {
+  return schemaType.embeddedSchemaType ?? schemaType.$embeddedSchemaType;
 }
